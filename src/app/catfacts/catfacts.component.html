@@ -1,0 +1,16 @@
+
+
+
+<mat-list>
+  <mat-list-item></mat-list-item>
+</mat-list>
+
+<mat-card class="card">
+  <mat-card-title><button mat-raised-button color="primary" (click)="apiCall()">Get new Fact!</button></mat-card-title>
+  <mat-card-content>
+    <p>
+      {{fact}}
+    </p>
+  </mat-card-content>
+  <img mat-card-image [src]="'https://cataas.com/cat/says/tarea5lmp ' + fact + '?size=20&color=red'">
+</mat-card>

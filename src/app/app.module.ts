@@ -8,10 +8,16 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatButtonModule} from '@angular/material/button';
 import {MatListModule} from '@angular/material/list';
 import {HttpClientModule} from '@angular/common/http';
+import {CookieService} from 'ngx-cookie-service';
+import { CatfactsComponent } from './catfacts/catfacts.component';
+import { LastFactComponent } from './last-fact/last-fact.component';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CatfactsComponent,
+    LastFactComponent
   ],
   imports: [
     BrowserModule,
@@ -21,8 +27,9 @@ import {HttpClientModule} from '@angular/common/http';
     MatButtonModule,
     MatListModule,
     HttpClientModule,
+    MatCardModule,
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

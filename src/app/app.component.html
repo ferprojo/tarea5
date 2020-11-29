@@ -1,10 +1,4 @@
-
-<button mat-raised-button color="primary" (click)="apiCall()">Basic</button>
-
-<mat-list>
-  <mat-list-item>{{fact}}</mat-list-item>
-</mat-list>
-
-<img [src]="'https://cataas.com/cat/says/tarea5lmp ' + fact + '?size=50&color=red'">
+<button mat-raised-button color="primary" routerLink="last">Last Fact</button>
+<button mat-raised-button color="primary" routerLink="">New Fact</button>
 
 <router-outlet></router-outlet>
