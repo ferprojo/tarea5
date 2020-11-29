@@ -9,8 +9,8 @@ import {CookieService} from 'ngx-cookie-service';
 })
 export class CatfactsComponent implements OnInit {
 
-  public fact = '';
-  public cat: any;
+  public fact = new Date().toLocaleString().replace(/\//g, ' ');
+  public date: string;
 
   constructor(private http: HttpClient, private cookies: CookieService) {
   }
@@ -19,7 +19,8 @@ export class CatfactsComponent implements OnInit {
     this.http.get<any>('https://catfact.ninja/fact').subscribe(fact => {
       this.fact = fact.fact;
       this.cookies.set('last-cat-fact', fact.fact);
-      this.cookies.set('last-cat-fact-date', Date.now().toString());
+      this.cookies.set('last-cat-fact-date', new Date().toLocaleString());
+      this.date = new Date().toLocaleString().replace(/\//g, ' ');
     });
   }
 
